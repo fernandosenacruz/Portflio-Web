@@ -1,12 +1,43 @@
+
+.container1 {
+    height: 220px;
+    position: relative;
+}
+
+#foto-perfil{
+    border-radius: 15;
+    float: left;
+    padding: 10px;
+    background-color: lightcoral;
+    border: 1px solid royalblue;
+    position: absolute;
+    z-index: 2;
+}
+
+p{
+    position: absolute;
+    z-index: 1;
+    float: right;
+    top: 20%;
+    right: 10%;
+}
+
+body h1 {
+    text-align: center;
+    background-color: #f3fcf8;
+    padding: 20px 30px;
+}
+
 h1,p {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-family: cursive, sans-serif;
 }    
 
 body {
-    background-color: rgb(207, 239, 243);    
-    width: 400px;    
+    background-color: rgb(201, 206, 207);    
+    max-width: 90%;    
     align-items:center;
     text-align: justify;
+    padding: 5px;
 }
 
 li {
@@ -15,7 +46,7 @@ li {
 
 .l1 {
     font-size: 16px;
-    color: rosybrown;
+    color: rgb(126, 81, 81);
 }
 
 .l2 {
@@ -24,13 +55,13 @@ li {
 }
 
 .l3 {font-size: 25px;
-    color: sandybrown;
+    color: rgb(150, 82, 22);
 
 }
 
 .l4 {
     font-size: 28px;
-    color: silver;
+    color: rgb(187, 6, 6);
 }
 
 .l5 {
@@ -38,7 +69,7 @@ li {
     color: olive;
 }
 
-.caixinha {
+.container2 {
         color: #292323;
         background-color: #f3fcf8;
         padding: 20px 30px;
@@ -50,10 +81,7 @@ li {
         text-align: justify;
 }
 
-.imagem-perfil{
-    border-radius: 15;
-    float: left;
-}
+
 
 a {
     text-decoration: none;
@@ -65,10 +93,14 @@ a {
     color: gold;
 }
 
-.parágrafo {
-    background-color: indigo;
+.container3 {
+    background-color: rgb(13, 5, 19);
     height: 100px;
     width: 400px;
     overflow: auto;
     
+}
+
+ul li:nth-child(odd){
+    background-color: white;
 }
