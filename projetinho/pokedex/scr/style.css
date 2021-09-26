@@ -10,3 +10,17 @@ body {
 .loading {
     display: flex;
 }
+
+.ximira {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokedex {
+    display: flex;
+    background-size: 100% 100%;
+    background-image: url(../utils/imgs/pokedex.webp);
+    width: 1200px;
+    height: 780px;
+}

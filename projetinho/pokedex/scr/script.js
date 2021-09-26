@@ -26,26 +26,29 @@ const getImgPokemon = (imgSrc, polemonName) => {
 }
 
 const getStats = (obj) => obj.reduce((acc, objCurr) => {
-    acc += `${objCurr.stat.name}: ${objCurr.base_stat}`
+    acc += `${objCurr.stat.name}: ${objCurr.base_stat}<br>`;
     return acc}, '');
 
 
 const getPokemon = async () => {
-    const inputNamePokemon = document.getElementById('input_pokemon').value;
+    const inputNamePokemon = document.getElementById('input_pokemon').value.toLowerCase();
     try {
         loading()
         setTimeout( async () => {
             const response = await fetch(`${API_URL}${inputNamePokemon}`);
-            const body = document.querySelector('body');
+            if (response.status !== 200) {
+                alert(`Pokemon não encontrado`);
+                loaded();
+                return 0;
+            };
+            const pokeStage = document.querySelector('.pokeStage');
             const data = await response.json();
             loaded();
             const creatPokemon = createElement('section', data.name, JSON.stringify(getStats(data.stats)));
-            body.appendChild(creatPokemon).appendChild(getImgPokemon(data.sprites.front_default, data.species.name));
-        
-
+            pokeStage.appendChild(creatPokemon).appendChild(getImgPokemon(data.sprites.front_default, data.species.name));
         },1000);
     } catch (error) {
-        console.log(error);
+        return error(new Error('Ximira'));
     }
 }
 

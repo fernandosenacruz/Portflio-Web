@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Fatdex</title>
 </head>
 <body>
     <main>
-        <span class="displayNone">Loading... <img src="../utils/gifs/pikachu-running.gif" alt="" width="30px"></span>
-        <input type="text" placeholder="Digite o nome de um pokemon..." id="input_pokemon">
-        <button id="pesquisar">Pesquisar <i class="fas fa-search"></i> </button>
+        <section class="ximira">
+            <div>
+                <span class="displayNone">Loading... <img src="../utils/gifs/pikachu-running.gif" alt="" width="30px"></span>
+                <input type="text" placeholder="Digite o nome de um pokemon..." id="input_pokemon">
+                <button id="pesquisar">Pesquisar <i class="fas fa-search"></i> </button>
+            </div>
+            <div class="pokedex"></div>
+        </section>
+        <div class="pokeStage"></div>
     </main>
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>
