@@ -14,13 +14,14 @@ const loaded = () => {
 const createElement = (element, id, innerHTML) => {
     const e = document.createElement(element);
     e.id = id;
-    e.innerHTML = innerHTML;
+    e.innerHTML = `<p>${innerHTML}</p>`;
+    e.className = 'xibil'
     return e;
 };
 
-const getImgPokemon = (imgSrc, polemonName) => {
+const getImgPokemon = (imgSrc, pokemonName) => {
     const img = document.createElement('img');
-    img.className = polemonName;
+    img.className = pokemonName;
     img.src = imgSrc;
     return img;
 }
@@ -37,7 +38,7 @@ const getPokemon = async () => {
         setTimeout( async () => {
             const response = await fetch(`${API_URL}${inputNamePokemon}`);
             if (response.status !== 200) {
-                alert(`Pokemon não encontrado`);
+                alert(`C tá maluko é? Kd seus estudos?`);
                 loaded();
                 return 0;
             };
