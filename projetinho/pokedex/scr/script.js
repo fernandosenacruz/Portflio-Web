@@ -1,4 +1,5 @@
 const API_URL = 'https://pokeapi.co/api/v2/pokemon/';
+const pokeStage = document.querySelector('.pokeStage');
 
 const loading = () => {
   const mesLoading = document.querySelector('.displayNone');
@@ -42,18 +43,25 @@ const getPokemon = async () => {
                 loaded();
                 return 0;
             };
-            const pokeStage = document.querySelector('.pokeStage');
             const data = await response.json();
             loaded();
             const creatPokemon = createElement('section', data.name, JSON.stringify(getStats(data.stats)));
             pokeStage.appendChild(creatPokemon).appendChild(getImgPokemon(data.sprites.front_default, data.species.name));
-        },1000);
+        },2000);
     } catch (error) {
         return error(new Error('Ximira'));
     }
 }
 
+const clear = () => {
+    if (pokeStage.hasChildNodes()){
+        console.log('ximira')
+        pokeStage.removeChild();
+    }
+    getPokemon()
+}
+
 window.onload = () => {
     const benjaminButton = document.getElementById('pesquisar');
-    benjaminButton.addEventListener('click', getPokemon) ;
+    benjaminButton.addEventListener('click', clear) ;
 }

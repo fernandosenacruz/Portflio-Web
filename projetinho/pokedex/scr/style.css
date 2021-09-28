@@ -22,7 +22,8 @@
     display: flex;
     background-size: 100% 100%;
     background-image: url(../utils/imgs/pokedex.webp);
-    position: relative;
+    position: absolute;
+    margin-top: 30px;
     width: 1200px;
     height: 780px;
 }
@@ -37,4 +38,5 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
+    margin-top: 480px;
 }
