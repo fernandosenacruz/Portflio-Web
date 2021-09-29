@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(243, 199, 3);
+    text-shadow: 0 1px 2px rgb(160, 139, 139), 0 1px 2px blueviolet;
 }
 
 .displayNone {
@@ -10,6 +24,11 @@
 
 .loading {
     display: flex;
+}
+
+.shadow-custom, #pesquisar {
+    margin: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 15px 11px rgba(0, 0, 0, 0.25) !important;
 }
 
 .ximira {
@@ -23,10 +42,11 @@
     background-size: 100% 100%;
     background-image: url(../utils/imgs/pokedex.webp);
     position: absolute;
-    margin-top: 30px;
+    margin-top: 60px;
     width: 1200px;
     height: 780px;
 }
+
 
 .pokeStage {
     display: flex;
@@ -34,9 +54,16 @@
     justify-content: center;
 }
 
+.pokeStage section p {
+    margin-left: 50px;
+}
+
 .xibil {
+    padding: 10px;
+    margin: 5px;
     position: absolute;
     display: flex;
     justify-content: space-between;
-    margin-top: 480px;
+    margin-top: 475px;
+    width: 320px;
 }

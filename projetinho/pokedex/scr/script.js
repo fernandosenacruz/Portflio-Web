@@ -45,7 +45,7 @@ const getPokemon = async () => {
             };
             const data = await response.json();
             loaded();
-            const creatPokemon = createElement('section', data.name, JSON.stringify(getStats(data.stats)));
+            const creatPokemon = createElement('section', data.name, getStats(data.stats));
             pokeStage.appendChild(creatPokemon).appendChild(getImgPokemon(data.sprites.front_default, data.species.name));
         },2000);
     } catch (error) {
@@ -54,11 +54,8 @@ const getPokemon = async () => {
 }
 
 const clear = () => {
-    if (pokeStage.hasChildNodes()){
-        console.log('ximira')
-        pokeStage.removeChild();
-    }
-    getPokemon()
+    pokeStage.innerHTML = ' ';
+    getPokemon();
 }
 
 window.onload = () => {
