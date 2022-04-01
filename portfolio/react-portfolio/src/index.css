@@ -12,10 +12,10 @@
 
 :root {
   --color-primary: #2068cd;
-  --colot-primary-variant: #963fe7;
+  --color-primary-variant: #963fe7;
   --color-bg: #15401e;
-  --color-bg-variant: #449f52;
-  --color-ligth: #4b8a55;
+  --color-bg-variant: #90ed82;
+  --color-ligth: #81edc7;
   --color-white: #f7f7f7;
 
   --transition: all 0.4s ease-in-out;
@@ -30,7 +30,7 @@ html {  scroll-behavior: smooth;}
 ::-webkit-scrollbar {  display: none;}
 
 body {
-  font-family: 'Montserrat', sans-serif, 'VT323', monospace;
+  font-family: 'VT323', monospace, 'Montserrat', sans-serif;
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
@@ -47,11 +47,11 @@ body {
 h1, h2, h3, h4, h5, h6 {  font-weight: 500;}
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
-section {  margin-top: 5rem;}
+section {  margin-top: 3rem;}
 
 section > h2, section > h6 {
   text-align: center;
@@ -103,7 +103,7 @@ image {
 }
 
 /* ================== MIDEA QUERIES (MD) ================== */
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
@@ -114,7 +114,7 @@ image {
 }
 
 /* ================== MIDEA QUERIES (SM) ================== */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
   }
