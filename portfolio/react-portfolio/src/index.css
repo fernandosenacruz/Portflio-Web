@@ -51,7 +51,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
-section {  margin-top: 3rem;}
+section { 
+  margin-top: 3rem;
+  height: 80vh;
+}
 
 section > h2, section > h6 {
   text-align: center;
