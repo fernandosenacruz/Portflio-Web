@@ -20,7 +20,7 @@ const Header = () => {
         <CTA />
         <HeaderSocial />
         <span className='me'>
-        <img src={ Me } alt="Homem com casaco reclinado" className='me__img'/>
+        <img src={ Me } alt="man reclining with coat" className='me__img'/>
       </span>
       <a href="#contact" className='scroll__down'>Scroll down</a>
       </div>
