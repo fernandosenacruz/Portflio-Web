@@ -30,12 +30,7 @@ const About = () => {
             <article className="about__card">
               <RiFolderChartFill className="about__card-icon" />
               <h5>Projects</h5>
-                <img src={ SiGithubactions } alt="GitHub logo" />
-                <a 
-                  href="https://github.com/fernandosenacruz?tab=repositories"
-                  className="btn btn-primary"
-                >
-                </a>
+                <a href="https://github.com/fernandosenacruz?tab=repositories"><SiGithubactions /></a>
             </article>
           </div>
 
@@ -43,7 +38,7 @@ const About = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio veritatis eos molestiae itaque, natus delectus sint eius et deleniti tempore magnam voluptatum officiis quam, quisquam omnis sapiente numquam voluptatem perspiciatis, eaque optio laboriosam. Hic asperiores ex veniam animi odit illo. Aliquid, mollitia nisi voluptatem nemo quasi pariatur debitis sunt officiis!
           </p>
 
-          <a href="#contact" className="btn btn-primary">Lest's talk { GiSharpSmile }</a>
+          <a href="#contact" className="btn btn-primary">Let's talk <GiSharpSmile /> </a>
 
         </div>
       </div>

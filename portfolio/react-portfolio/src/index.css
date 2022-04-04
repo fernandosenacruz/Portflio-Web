@@ -12,13 +12,13 @@
 
 :root {
   --color-primary: #2068cd;
-  --color-primary-variant: #a069d6;
+  --color-primary-variant: #b282dc;
   --color-bg: #15401e;
   --color-bg-variant: #90ed82;
   --color-ligth: #81edc7;
   --color-white: #f7f7f7;
 
-  --transition: all 0.4s ease-in-out;
+  --transition: all 0.6s ease-in-out;
 
   --container-width-1g:75%;
   --container-width-md:86%;

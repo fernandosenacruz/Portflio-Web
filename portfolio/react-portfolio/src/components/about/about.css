@@ -1,3 +1,8 @@
+#about h5 {
+  display: grid;
+  place-items: center;
+}
+
 .about__container {
   display: grid;
   gap: 15%;
@@ -37,10 +42,10 @@
 }
 
 .about__card {
-  background-color: var(--color-primary-variant);
+  background: linear-gradient(var(--color-primary-variant), transparent);
   border: 1px solid transparent;
   border-radius: 1rem;
-  opacity: 80%;
+  opacity: 70%;
   padding: 0.8rem;
   text-align: center;
   transition: var(--transition);
@@ -56,4 +61,36 @@
   color: var(--color-primary);
   font-size: 1.4rem;
   margin-bottom: 1rem;
+}
+
+/* ================== MIDEA QUERIES (MD) ================== */
+@media (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about__me {
+    width: 50%;
+    margin-bottom: 2rem auto 4rem;
+  }
+
+  .about__content p { margin: 1rem 0 1.5rem; }
+}
+
+/* ================== MIDEA QUERIES (SM) ================== */
+@media (max-width: 600px) {
+  .about__me {
+    width: 65%;
+    margin: 0 auto 2rem;
+  }
+
+  .about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .about__content { text-align: center; }
+
+  .about__content p { margin: 1.5rem 0; }
 }
