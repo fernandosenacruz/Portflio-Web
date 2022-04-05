@@ -75,7 +75,7 @@
     margin-bottom: 2rem auto 4rem;
   }
 
-  .about__content p { margin: 1rem 0 1.5rem; }
+  .about__content  p { margin: 1rem 0 1.5rem; }
 }
 
 /* ================== MIDEA QUERIES (SM) ================== */
@@ -92,5 +92,5 @@
 
   .about__content { text-align: center; }
 
-  .about__content p { margin: 1.5rem 0; }
+  .about__content  p { margin: 1.5rem 0; }
 }
