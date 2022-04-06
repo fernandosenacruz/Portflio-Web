@@ -69,7 +69,11 @@
 /* ================== MIDEA QUERIES (MD) ================== */
 @media (max-width: 1024px) {
   .experience__container {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
   }
 
   .experience__container > div {
@@ -78,8 +82,21 @@
     margin: 0 auto;
   }
 
+  .experience__itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
   .experience__content {
     padding: 0.5rem;
+  }
+
+  .experience__details-img { 
+    align-items: center;
+    width: 100%;
   }
 }
 

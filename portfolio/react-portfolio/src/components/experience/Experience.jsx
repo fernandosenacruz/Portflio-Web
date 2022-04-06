@@ -67,7 +67,7 @@ const Experience = () => {
         <div className="experience__itens">
           <h3>Coach Depression</h3>
           <div>
-            <a href="https://coach-da-depressao-front.vercel.app/">
+            <a href="https://coach-da-depressao-front.vercel.app/" target="_blank" rel="noreferrer">
               <img src={coachDepression} alt="git deploy coach depression" className="experience__details-img"/>
             </a>
           </div>
