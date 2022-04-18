@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { BsMailbox2 } from 'react-icons/bs';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
+import emailjs from 'emailjs-com';
 import './contact.css';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_w36zo4f', 'template_k4gq1nl', form.current, 'l_az5865OFoYItI2G')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+    e.target.reset();
+  };
+
   return (
     <section id='contact'>
       <h2>Contact Me</h2>
@@ -22,9 +38,9 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/fernandosenacruz/" target="_blank" rel="noreferrer">Send a mensage</a>
           </article>
         </div>
-        <form action="">
-          <input type="text" placeholder="Name" required/>
-          <input type="email" placeholder="Email or Social Mideas" required/>
+        <form ref={ form } onSubmit={ sendEmail }>
+          <input type="text" name="name" placeholder="Name" required/>
+          <input type="email" name="email" placeholder="Email or Social Mideas" required/>
           <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
           <button type="submit" className="btn btn-primary">Send</button>
         </form>
