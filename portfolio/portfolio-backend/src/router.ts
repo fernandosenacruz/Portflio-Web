@@ -1,9 +1,12 @@
 import { Router } from "express";
-import { firstController } from "./app/controller/FirstController";
+import { commentController } from "./app/controller/CommentController";
 
 const router: Router = Router()
 
-//Routes
-router.get("/", firstController.home);
+// router.get("/", commentController.home);
+router.get("/comments", commentController.getComment);
+router.post("/comment", commentController.createComment);
+router.put("/comment/:id", commentController.updateComment);
+router.delete("/comment/:id", commentController.deleteComment);
 
 export { router };

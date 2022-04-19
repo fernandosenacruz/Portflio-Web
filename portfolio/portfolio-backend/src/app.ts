@@ -1,6 +1,5 @@
 import express from "express";
 import { router } from "./router";
-import { PrismaClient } from '@prisma/client'
 
 export class App{
   public server: express.Application;
