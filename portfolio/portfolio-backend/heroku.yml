@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: node index.ts
+  web: ts-node --transpile-only src/index.ts

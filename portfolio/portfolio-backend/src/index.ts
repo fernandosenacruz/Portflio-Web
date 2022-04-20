@@ -1,3 +1,5 @@
 import { App } from "./app"
 
-new App().server.listen(3000);
+const PORT = process.env.PORT || 3000;
+
+new App().server.listen(PORT, () => console.log("rodando", PORT));

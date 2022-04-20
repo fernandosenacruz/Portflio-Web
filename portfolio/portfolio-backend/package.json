@@ -4,6 +4,7 @@
   "description": "API que recebe comentários, edita e os retorna usando um db",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node --transpile-only src/index.ts",
     "start:dev": "nodemon",
     "test": "mocha -r ts-node/register ./tests/**/*.{test,spec}.[t,j]s",
     "lint": "eslint  -c .eslintrc.json src/**/*.[t,j]s",

@@ -2,12 +2,12 @@ FROM node:alpine
 
 WORKDIR /src
 
-COPY package.json .
+COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-RUN cd /src
+RUN npx prisma generate
 
-CMD ["node", "index.ts"]
+ENTRYPOINT ["npm", "start"]
