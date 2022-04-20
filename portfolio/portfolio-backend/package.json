@@ -4,7 +4,7 @@
   "description": "API que recebe comentários, edita e os retorna usando um db",
   "main": "index.js",
   "scripts": {
-    "prestart": "prisma migrate dev --name init",
+    "prestart": "prisma db push",
     "start": "ts-node --transpile-only src/index.ts",
     "start:dev": "nodemon",
     "test": "mocha -r ts-node/register ./tests/**/*.{test,spec}.[t,j]s",
