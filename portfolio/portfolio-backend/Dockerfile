@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-RUN npx prisma generate
+# RUN npx prisma generate
 
 ENTRYPOINT ["npm", "start"]
