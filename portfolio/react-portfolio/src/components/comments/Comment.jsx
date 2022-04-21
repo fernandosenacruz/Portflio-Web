@@ -13,7 +13,8 @@ const Comment = () => {
     async function getComments() {
       try {
         const { data } = await API.get('/comments');
-        setComments(data);        
+        console.log(data);
+        setComments(data);       
       } catch (error) {
         console.log(error);        
       }
