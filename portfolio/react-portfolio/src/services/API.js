@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const DATABASE_URL =
-  process.env.NODE_ENV === 'production'
+  process.env.NODE_ENV === 
+  'production'
   ? 'http://localhost:3000'
   : 'https://fatnando-portfoli-backend.herokuapp.com';
 
