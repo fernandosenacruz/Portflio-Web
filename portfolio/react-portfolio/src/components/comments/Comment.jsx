@@ -4,55 +4,28 @@ import './comment.css';
 import fatnando_cartoon from '../../assets/fatnando_cartoon.jpg';
 import fatnando_it from '../../assets/fatnando_it.png';
 
-const comment = [
-  {
-    id: 1,
-    createdAt: '2022-04-20T22:17:36.695Z',
-    updatedAt: '2022-04-20T22:17:36.695Z',
-    title: 'Sugestão',
-    content: 'Acredite no seu potencia e desista',
-    published: false,
-    author: 'CdD',
-  },
-  {
-    id: 2,
-    createdAt: '2022-04-22T11:08:02.121Z',
-    updatedAt: '2022-04-22T11:08:02.121Z',
-    title: 'Crítica',
-    content: 'Apaga e começa do zero',
-    published: false,
-    author: 'Ximira',
-  },
-];
-
 const Comment = () => {
-  const [comments, setComments] = useState(
-    // [
-    //   {
-    //     title: 'No comments yet',
-    //     comment: '',
-    //     author: null,
-    //   },
-    // ]
-    comment
-  );
+  const form = useRef();
+
+  const [comments, setComments] = useState([{
+    title: 'No comments yet',
+    comment: '',
+    author: null,
+    },
+  ]);
 
   useEffect(() => {
     async function getComments() {
       try {
-        // const { data } = await API.get('/comments');
-        // console.log(data);
-        // setComments(data);
-
-        setComments(comments);
+        const { data } = await API.get('/comments');
+        console.log(data);
+        setComments(data);
       } catch (error) {
         console.log(error);
       }
     }
     getComments();
   });
-
-  const form = useRef();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,7 +60,7 @@ const Comment = () => {
 
   return (
     <section id="comment">
-      {/* <div className="container comment__container">
+      <div className="container comment__container">
         <div className="comment__options">
           {comments.map(({ title, comment, author }, index) => (
             <article key={index} className="comment__option">
@@ -97,7 +70,7 @@ const Comment = () => {
             </article>
           ))}
         </div>
-      </div> */}
+      </div>
 
       <div
         id="carouselExampleIndicators"
