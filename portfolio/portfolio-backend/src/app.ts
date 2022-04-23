@@ -1,4 +1,4 @@
-import express from "express";
+import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import { router } from "./router";
 
@@ -29,8 +29,9 @@ export class App{
     this.server.use(router);
   }
 
+  // config() retirada do projeto TCF da https://www.linkedin.com/school/betrybe/
   private config(): void {
-    const accessControl: express.RequestHandler = (_req, res, next) => {
+    const accessControl: express.RequestHandler = (_req: Request, res:Response, next: NextFunction) => {
       res.header('Access-Control-Allow-Origin', '*');
       res.header('Access-Control-Allow-Methods', 'GET,POST,DELETE,OPTIONS,PUT,PATCH');
       res.header('Access-Control-Allow-Headers', '*');

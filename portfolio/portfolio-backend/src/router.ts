@@ -3,7 +3,6 @@ import { commentController } from "./app/controller/CommentController";
 
 const router: Router = Router()
 
-// router.get("/", commentController.home);
 router.get("/comments", commentController.getComment);
 router.post("/comment", commentController.createComment);
 router.put("/comment/:id", commentController.updateComment);
