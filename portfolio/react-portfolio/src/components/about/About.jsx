@@ -12,26 +12,17 @@ const testemonial = {
 }
 
 const About = () => {
-  // const [testemonialState, setTestimonial] = useState(testemonial.english);
-  // const [language, setLanguage] = useState({ language: 'en' });
+  const [paragraph, setParagraph] = useState(testemonial.english);
+  const [turnOn, setTurnOn] = useState(true);
 
-  // useEffect(() => {
-  //   function translate() {
-  //     if (language.language === 'en') {
-  //       setTestimonial(testemonialState.portuguese);
-  //       setLanguage('pt');
-  //     }
-  //     if (language.language === 'pt') {
-  //       setTestimonial(testemonialState.english);
-  //       setLanguage('en');
-  //     }
-  //   }
-  //   translate();
-  // }, []);
+  useEffect(() => {
+    turnOn === true ? setParagraph(testemonial.english) : setTurnOn(testemonial.portuguese);
+    if (!turnOn) setParagraph(testemonial.portuguese);
+  }, [turnOn]);
 
-  // const handleClick= (e) => {
-  //   console.log(e.target.value);
-  // }
+  const handleClick= () => {
+    turnOn === true ? setTurnOn(false) : setTurnOn(true);
+  }
 
   return (
     <section id="about">
@@ -60,16 +51,25 @@ const About = () => {
             </article>
           </div>
 
-          {/* {language === 'en' ? <p>{testemonial.english}</p> : <p>{testemonial.portuguese}</p>} */}
-
-          {/* <button
-            type="button"
-            className="btn btn-primary"
-            onClick={(e) => handleClick(e)}
-          >
-            Tranlate
-          </button> */}
-          <p>{testemonial.english}</p>
+          <div>
+            <p className='paragraph'>{paragraph}</p>
+            
+            {turnOn === true
+              ? <button
+              type="button"
+              className="btn btn-primary"
+              onClick={ handleClick }
+            >
+              Translate
+            </button>
+              : <button
+              type="button"
+              className="btn btn-primary"
+              onClick={ handleClick }
+            >
+              Traduzir
+            </button>}
+          </div>      
 
           <a href="#contact" className="btn btn-primary">Let's talk <GiSharpSmile /> </a>
 

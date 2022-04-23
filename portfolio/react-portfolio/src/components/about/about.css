@@ -63,6 +63,12 @@
   margin-bottom: 1rem;
 }
 
+.paragraph {
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+  transition: var(--transition);
+}
+
 /* ================== MIDEA QUERIES (MD) ================== */
 @media (max-width: 1024px) {
   .about__container {
@@ -92,6 +98,11 @@
     margin-bottom: 2rem;
     text-align: justify;
   }
+
+  .paragraph {
+  margin-top: 0.8rem;
+  margin-right: 1rem;
+}
 }
 
 /* ================== MIDEA QUERIES (SM) ================== */
@@ -122,4 +133,8 @@
   .btn.btn-primary {
     margin-left: 5rem;
   }
+  .paragraph {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+}
 }
