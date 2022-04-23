@@ -16,7 +16,7 @@
     360deg,
     transparent,
     var(--color-primary-variant));
-  border: 1px solid transparent;
+  border: 1px 1px 1px solid transparent;
   border-radius: 1.25rem;
   margin-bottom: 1rem;
   padding: auto;

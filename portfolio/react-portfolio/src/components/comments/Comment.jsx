@@ -23,7 +23,6 @@ const Comment = () => {
     async function getComments() {
       try {
         const { data } = await API.get('/comments');
-        console.log(data);
         setComments(data);
       } catch (error) {
         console.log(error);
@@ -56,6 +55,8 @@ const Comment = () => {
           author,
         },
       ]);
+
+      form.reset();
     } catch (error) {
       console.log(error);
     }
@@ -79,25 +80,25 @@ const Comment = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <form ref={form} onSubmit={(e) => handleSubmit(e)} className="form__comment">
+          <input type="text" name="title" placeholder="Title" required/>
+          <input type="text" name="author" placeholder="Author" required/>
+          <textarea
+            name="content"
+            id="content"
+            cols="15"
+            rows="5"
+            placeholder="Comment"
+            required
+            ></textarea>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            >
+            Add Comment
+          </button>
+        </form>
       </div>
-      <form ref={form} onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" name="title" placeholder="Title" />
-        <input type="text" name="author" placeholder="Author" />
-        <textarea
-          name="content"
-          id="content"
-          cols="15"
-          rows="5"
-          placeholder="Comment"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="btn btn-primary"
-        >
-          Add Comment
-        </button>
-      </form>
     </section>
   );
 };

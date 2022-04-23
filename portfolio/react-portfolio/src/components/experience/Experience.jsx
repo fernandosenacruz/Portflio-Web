@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCheckSquare } from 'react-icons/fa';
 import coachDepression from '../../assets/coach_depression.gif';
+import recipesApp from '../../assets/trybe_recipes-app.gif';
 import './experience.css';
 
 const Experience = () => {
@@ -69,6 +70,14 @@ const Experience = () => {
           <div>
             <a href="https://coach-da-depressao-front.vercel.app/" target="_blank" rel="noreferrer">
               <img src={coachDepression} alt="git deploy coach depression" className="experience__details-img"/>
+            </a>
+          </div>
+        </div>
+        <div className="experience__itens">
+          <h3>Recipes App</h3>
+          <div>
+            <a href="https://projeto-trybe-recipes-app.vercel.app/" target="_blank" rel="noreferrer">
+              <img src={recipesApp} alt="git deploy recipes app" className="experience__details-img"/>
             </a>
           </div>
         </div>

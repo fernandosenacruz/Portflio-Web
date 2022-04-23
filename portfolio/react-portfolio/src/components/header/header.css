@@ -79,14 +79,20 @@ header {
 /* ================== MIDEA QUERIES (MD) ================== */
 @media (max-width: 1024px) {
   header {
-    height: 70vh;
+    height: 80vh;
   }
 }
 
 /* ================== MIDEA QUERIES (SM) ================== */
 @media (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 140vh;
+  }
+
+  .me, .me__img {
+    height: 100%;
+    margin-left: 2rem;
+    width: 100%;
   }
 
   .header__social, .scroll__down {

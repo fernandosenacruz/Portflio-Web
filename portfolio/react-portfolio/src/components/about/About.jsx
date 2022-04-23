@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MeWithIt from '../../assets/fatnando_it.png';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { RiFolderChartFill } from 'react-icons/ri';
@@ -6,7 +6,33 @@ import { SiGithubactions } from 'react-icons/si';
 import { GiSharpSmile } from 'react-icons/gi';
 import './about.css';
 
+const testemonial = {
+  portuguese: 'Enfermeiro de formação, após decepções na carreira decidi migrar para o desenvolvimento web. Apaixonado por games e tecnologia ouvi minha esposa, que é minha maior incentivadora, e megulhei de cabeça neste mundo fantático. A trybe foi fundamental para minha formação. Aprendi muito do que sei e, sobretudo entendi que o que ainda não sei está há algumas pesquisas de distância. Fiz bons amigos que me ajudam em meu crescimento pessoal e profissional. O projetos desenvolvidos ao longo do curso foram e são muito difíceis para mim, ao passo que não avançaria sem o apoio deles, bem como do corpo de instrutores. Desenvolvi o sentimento de grupo para cooperação, ouvir e aprender com outras formas de pensar e, sobretudo a não desistir.',
+  english: "Nurse by training, after career disappointments I decided to migrate to web development. Passionate about games and technology, I listened to my wife, who is my biggest supporter, and I plunged headlong into this fantastic world. Trybe was fundamental for my training. I learned a lot of what I know and, above all, I understood that what I still don't know is a few researches away. I made good friends who help me in my personal and professional growth. The projects developed throughout the course were and are very difficult for me, as I would not have progressed without their support, as well as the instructor's team. I developed the group feeling for cooperation, listening and learning from other ways of thinking and, above all, not giving up."
+}
+
 const About = () => {
+  // const [testemonialState, setTestimonial] = useState(testemonial.english);
+  // const [language, setLanguage] = useState({ language: 'en' });
+
+  // useEffect(() => {
+  //   function translate() {
+  //     if (language.language === 'en') {
+  //       setTestimonial(testemonialState.portuguese);
+  //       setLanguage('pt');
+  //     }
+  //     if (language.language === 'pt') {
+  //       setTestimonial(testemonialState.english);
+  //       setLanguage('en');
+  //     }
+  //   }
+  //   translate();
+  // }, []);
+
+  // const handleClick= (e) => {
+  //   console.log(e.target.value);
+  // }
+
   return (
     <section id="about">
       <h5>A little</h5>
@@ -34,9 +60,16 @@ const About = () => {
             </article>
           </div>
 
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio veritatis eos molestiae itaque, natus delectus sint eius et deleniti tempore magnam voluptatum officiis quam, quisquam omnis sapiente numquam voluptatem perspiciatis, eaque optio laboriosam. Hic asperiores ex veniam animi odit illo. Aliquid, mollitia nisi voluptatem nemo quasi pariatur debitis sunt officiis!
-          </p>
+          {/* {language === 'en' ? <p>{testemonial.english}</p> : <p>{testemonial.portuguese}</p>} */}
+
+          {/* <button
+            type="button"
+            className="btn btn-primary"
+            onClick={(e) => handleClick(e)}
+          >
+            Tranlate
+          </button> */}
+          <p>{testemonial.english}</p>
 
           <a href="#contact" className="btn btn-primary">Let's talk <GiSharpSmile /> </a>
 

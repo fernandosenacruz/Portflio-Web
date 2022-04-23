@@ -43,7 +43,7 @@
 
 .about__card {
   background: linear-gradient(var(--color-primary-variant), transparent);
-  border: 1px solid transparent;
+  border: 1px 1px 1px solid transparent;
   border-radius: 1rem;
   opacity: 70%;
   padding: 0.8rem;
@@ -102,16 +102,24 @@
   }
 
   .about__cards {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    margin-left: 2rem;
     width: 80%;
   }
 
-  .about__card { width: 50% }
+  .about__card { 
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 
   .about__content > p { 
     text-align: center; 
     margin: 1.5rem;
   }
 
+  .btn.btn-primary {
+    margin-left: 5rem;
+  }
 }
