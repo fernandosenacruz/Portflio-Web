@@ -1,0 +1,41 @@
+footer { 
+  background: linear-gradient(
+    360deg,
+    transparent,
+    var(--color-bg-variant));
+  border-radius: 3rem 3rem 0 0;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 5rem;
+}
+
+.footer__logo { 
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 0 auto 3rem;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+  color: black;
+}
+
+/* ================== MIDEA QUERIES (SM) ================== */
+@media (max-width: 600px) { 
+  .footer__list {
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 0.1rem;
+  }
+}

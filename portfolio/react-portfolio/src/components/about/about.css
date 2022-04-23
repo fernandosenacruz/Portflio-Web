@@ -1,0 +1,140 @@
+#about h5 {
+  display: grid;
+  place-items: center;
+}
+
+.about__container {
+  display: grid;
+  gap: 15%;
+  grid-template-columns: 35% 50%;
+}
+
+.about__me {
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary)
+  );
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.about__me-img {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(-5deg);
+  transition: var(--transition);
+  max-width: 21rem;
+  max-height: 21rem;
+}
+
+.about__me-img:hover {
+  transform: rotate(0deg);
+}
+
+.about__cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about__card {
+  background: linear-gradient(var(--color-primary-variant), transparent);
+  border: 1px 1px 1px solid transparent;
+  border-radius: 1rem;
+  opacity: 70%;
+  padding: 0.8rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.about__card-icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+  transition: var(--transition);
+}
+
+/* ================== MIDEA QUERIES (MD) ================== */
+@media (max-width: 1024px) {
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+  }
+
+  .about__card { width: 40% }
+
+  .about__me {
+    display: flex;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+
+  .about__content  p { 
+    width: 90%;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .paragraph {
+  margin-top: 0.8rem;
+  margin-right: 1rem;
+}
+}
+
+/* ================== MIDEA QUERIES (SM) ================== */
+@media (max-width: 600px) {
+  .about__me {
+    width: 65%;
+    margin-bottom: 2rem;
+  }
+
+  .about__cards {
+    align-items: center;
+    flex-direction: column;
+    margin-left: 2rem;
+    width: 80%;
+  }
+
+  .about__card { 
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about__content > p { 
+    text-align: center; 
+    margin: 1.5rem;
+  }
+
+  .btn.btn-primary {
+    margin-left: 5rem;
+  }
+  .paragraph {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+}
+}

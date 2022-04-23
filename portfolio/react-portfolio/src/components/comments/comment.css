@@ -1,0 +1,87 @@
+.container.comment__container {
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.comment__options {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+  width: 40%;
+}
+
+.comment__option.swiper-slide-active  {
+  background: linear-gradient(
+    360deg,
+    transparent,
+    var(--color-primary));
+  border: 1px 1px 1px solid transparent;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  width: 40%;
+}
+
+.form__comment {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+}
+
+/* ================== MIDEA QUERIES (MD) ================== */
+@media (max-width: 1024px) {
+  .container.comment__container{
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .comment__options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+  }
+
+  .comment__option { 
+    margin-bottom: 2rem;
+    width: 40%; 
+  }
+
+  .form__comment { width: 100% }
+}
+
+/* ================== MIDEA QUERIES (SM) ================== */
+@media (max-width: 600px) {
+  .container.comment__container{
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .comment__options {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .comment__option {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .form__comment {
+    width: 100%;
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+}
